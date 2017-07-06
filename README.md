@@ -5,11 +5,11 @@
 ![](https://github.com/brucejcw/vue-numkeyboard/blob/master/snapshot.png)
 
 ## Install
-npm install numkeyboard
+npm install vue-numkeyboard
 
 ## Usage
 ```
-import numkeyboard from 'numkeyboard';
+import numkeyboard from 'vue-numkeyboard';
 import 'numkeyboard/style.css';
 
 Vue.use(numkeyboard);

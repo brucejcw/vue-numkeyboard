@@ -1,6 +1,6 @@
 {
-  "name": "numkeyboard",
-  "description": "number keyboard for mobile",
+  "name": "vue-numkeyboard",
+  "description": "vue number keyboard for mobile",
   "version": "1.0.0",
   "author": "bruce.jcw@gmail.com",
   "scripts": {
