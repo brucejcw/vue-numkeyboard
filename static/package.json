@@ -1,0 +1,26 @@
+{
+  "name": "vue-numkeyboard",
+  "description": "vue number keyboard for mobile",
+  "version": "1.0.0",
+  "author": "bruce.jcw@gmail.com",
+  "main": "index.js",
+  "dependencies": {
+    "vue-directive-touch": "^1.0.8",
+    "vue-svgicon": "^1.1.9"
+  },
+  "devDependencies": {
+    "vue": "^2.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brucejcw/vue-numkeyboard.git"
+  },
+  "keywords": [
+    "vue",
+    "keyboard"
+  ],
+  "bugs": {
+    "url": "https://github.com/brucejcw/vue-numkeyboard/issues"
+  },
+  "license": "MIT"
+}
