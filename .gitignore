@@ -3,7 +3,6 @@ node_modules/
 dist/
 npm-debug.log
 yarn-error.log
-vue-numkeyboard/
 src/compiled-icons/
 
 # Editor directories and files

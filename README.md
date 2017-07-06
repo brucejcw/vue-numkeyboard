@@ -10,7 +10,7 @@ npm install vue-numkeyboard
 ## Usage
 ```
 import numkeyboard from 'vue-numkeyboard';
-import 'numkeyboard/style.css';
+import 'vue-numkeyboard/style.css';
 
 Vue.use(numkeyboard);
 

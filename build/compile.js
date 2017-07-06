@@ -7,9 +7,9 @@ const rootPath = process.cwd()
 const static = path.resolve(rootPath, 'static')
 const packageJson = path.resolve(static, 'package.json');
 const name = require(packageJson).name;
-const output = path.resolve(rootPath, name);
+const output = path.resolve(rootPath, 'dist', name);
 
-shell.rm('-rf', output)
+shell.rm('-rf', path.resolve(rootPath, 'dist'))
 webpack(webpackConfig, function(err, stats) {
   process.stdout.write(stats.toString({
     colors: true,
@@ -20,6 +20,7 @@ webpack(webpackConfig, function(err, stats) {
   }) + '\n\n');
 
   shell.cp('-R', static + '/**/*', output);
+  shell.cp(path.resolve(rootPath, 'README.md'), output)
 
   console.log(chalk.green.bold('> Compile Succeed'));
 })

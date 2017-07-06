@@ -8,7 +8,7 @@
     "compile": "npm run lint:js && npm run lint:css && npm run generate-icons && node build/compile.js",
     "lint:js": "eslint ./src/ --fix --format ./node_modules/eslint-friendly-formatter",
     "lint:css": "stylelint \"src/**/*.scss\" -s scss",
-    "publish": "npm publish ./numkeyboard",
+    "publish": "npm publish ./dist/vue-numkeyboard",
     "generate-icons": "vsvg -s ./src/assets/svg-icons -t ./src/compiled-icons"
   },
   "dependencies": {

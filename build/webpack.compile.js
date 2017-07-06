@@ -9,7 +9,7 @@ const name = require(packageJson).name;
 module.exports = {
   entry: path.resolve(rootPath, 'src', name),
   output: {
-    path: path.resolve(rootPath, name),
+    path: path.resolve(rootPath, 'dist', name),
     publicPath: '/',
     filename: 'index.js',
     libraryTarget: 'commonjs2'
