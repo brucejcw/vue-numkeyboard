@@ -2,9 +2,10 @@
 <div class="numKeyboardInput">
   <div ref="keyboardInput" :class="['keyboard-input', { 'keyboard-focus': showKeyboard }]" @click="focus">
     <!-- wrapper value with span, easy to calc elem length -->
-    <span>{{ value }}</span>
+    <span v-if="placeholder && value === ''" class="placeholder">{{ placeholder }}</span>
+    <span v-else class="input-value">{{ value }}</span>
   </div>
-  <keyboard ref="keyboard" @typing="typing" :show="showKeyboard" :activeOk="!!value" :point="point"></keyboard>
+  <keyboard ref="keyboard" @typing="typing" :show="showKeyboard" :activeOk="!!value" :point="point" :ok-text="okText"></keyboard>
 </div>
 </template>
 
@@ -37,7 +38,18 @@ export default {
     /**
      * v-model value
      */
-    'value': [String, Number]
+    'value': [String, Number],
+    /**
+     * ok button text
+     */
+    'okText': String,
+    /**
+     * placeholder
+     */
+    'placeholder': {
+      type: String,
+      default: ''
+    }
   },
 
   data () {
@@ -98,7 +110,7 @@ export default {
       let diffHeight = keyboard.clientHeight - (win.innerHeight - rect.top - exposeElem.clientHeight)
       if (diffHeight > 0) {
         this.orgHeight = body.style.height
-        diffHeight += 15 // 15: additional gap
+        diffHeight += 30 // 30: additional gap
         body.style.height = body.clientHeight + diffHeight + 'px'
         body.style.removeProperty('transition') // scrollTop will fail when height has transition
         win.scrollTo(0, diffHeight);

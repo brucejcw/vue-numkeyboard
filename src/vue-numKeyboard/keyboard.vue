@@ -17,7 +17,7 @@
           <td>1</td>
           <td>2</td>
           <td>3</td>
-          <td data-code='K' rowspan="2" :class="{active: activeOk}">OK</td>
+          <td data-code='K' rowspan="2" :class="{active: activeOk}">{{ okText || 'OK' }}</td>
         </tr>
         <tr>
           <td>{{ point ? '.' : '' }}</td>
@@ -36,7 +36,7 @@ export default {
 
   name: 'keyboard',
 
-  props: ['show', 'point', 'activeOk'],
+  props: ['show', 'point', 'activeOk', 'okText'],
 
   methods: {
     typing (e) {

@@ -14,7 +14,7 @@ import 'vue-numkeyboard/style.css';
 
 Vue.use(numkeyboard);
 
-<numkeyboard v-model="num" :expose-elem="exposeElem" :point="point"></numkeyboard>
+<numkeyboard v-model="num" ok-text="OK"></numkeyboard>
 ```
 
 ## Props

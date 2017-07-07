@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <numkeyboard v-model="num"></numkeyboard>
+    <numkeyboard v-model="num" ok-text="OK"></numkeyboard>
   </div>
 </template>
 
