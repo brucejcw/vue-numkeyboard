@@ -22,3 +22,5 @@ Vue.use(numkeyboard);
 |:----:|:----:|:----:|:---:|
 |expose-elem|String, Optional|current input element|raise page height if expose elemenet is covered by keyboard|
 |point|Boolean, Optional|true|show digital point|
+|ok-text|String|OK|ok button text|
+|placeholder|String|''|placeholder|
