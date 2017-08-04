@@ -79,5 +79,5 @@ export const panDetect = (callback) => {
 }
 
 function getElement (el) {
-  return Object.prototype.toString.call(el) === '[object String]' ? document.queryel(el) : el
+  return Object.prototype.toString.call(el) === '[object String]' ? document.querySelector(el) : el
 }
