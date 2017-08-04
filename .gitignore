@@ -4,6 +4,7 @@ dist/
 npm-debug.log
 yarn-error.log
 src/compiled-icons/
+test/unit/coverage/
 
 # Editor directories and files
 .idea
