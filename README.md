@@ -21,12 +21,12 @@ Vue.use(numkeyboard);
 ```
 
 ## Props
-|attribute|type|default|desc|
-|:----:|:----:|:----:|:---:|
-|expose-elem|String, Optional|current input element|raise page height if expose elemenet is covered by keyboard|
-|point|Boolean, Optional|true|show digital point|
-|ok-text|String|OK|ok button text|
-|placeholder|String|''|placeholder|
+|attribute|type|default|required|desc|
+|:----:|:----:|:----:|:---:|:---:|
+|expose-elem|String|current input element|false|raise page height if expose elemenet is covered by keyboard|
+|point|Boolean|true|false|show digital point|
+|ok-text|String|OK|false|ok button text|
+|placeholder|String|''|false|placeholder|
 
 [![MIT Licence][licence-image]][licence-url]
 
