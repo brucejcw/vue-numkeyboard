@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <numkeyboard v-model="num" ok-text="OK"></numkeyboard>
+    <numkeyboard v-model="num" ok-text="OK" text-align="left"></numkeyboard>
   </div>
 </template>
 
@@ -30,7 +30,7 @@ html, body {
 }
 
 #app {
-  padding-top: 1000px;
+  /*padding-top: 1000px;*/
 }
 
 .numKeyboardInput {

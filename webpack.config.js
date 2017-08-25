@@ -7,8 +7,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/',
-    filename: '[name].js'
+    publicPath: '/dist',
+    filename: 'build.js'
   },
   module: {
     rules: [
@@ -68,7 +68,12 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true,
     host: '0.0.0.0',
-    disableHostCheck: true
+    port: 9888,
+    disableHostCheck: true,
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: 1000
+    }
   },
   performance: {
     hints: false

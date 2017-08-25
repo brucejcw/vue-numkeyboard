@@ -1,9 +1,10 @@
 <template>
 <div class="numKeyboardInput">
-  <div ref="keyboardInput" :class="['keyboard-input', { 'keyboard-focus': showKeyboard }]" @click="focus">
+  <div ref="keyboardInput" :class="['keyboard-input', { 'keyboard-focus': showKeyboard }, textAlign]" @click="focus">
     <!-- wrapper value with span, easy to calc elem length -->
     <span v-if="placeholder && value === ''" class="placeholder">{{ placeholder }}</span>
     <span v-else class="input-value">{{ value }}</span>
+    <numkeyboard-icon name="clear" @click.native="clear" v-show="showClear && showKeyboard && value"></numkeyboard-icon>
   </div>
   <keyboard ref="keyboard" @typing="typing" :show="showKeyboard" :activeOk="!!value" :point="point" :ok-text="okText"></keyboard>
 </div>
@@ -38,7 +39,10 @@ export default {
     /**
      * v-model value
      */
-    'value': [String, Number],
+    'value': {
+      type: [String, Number],
+      default: ''
+    },
     /**
      * ok button text
      */
@@ -49,11 +53,19 @@ export default {
     'placeholder': {
       type: String,
       default: ''
+    },
+    /**
+     * start from left or right
+     */
+    'textAlign': {
+      type: String,
+      default: ''
     }
   },
 
   data () {
     return {
+      showClear: this.textAlign === 'left',
       showKeyboard: false,
       hasEventCallback: false,
       mutableValue: '',
@@ -96,6 +108,10 @@ export default {
         this.resetPageHeight()
       }
       this.showKeyboard = false
+    },
+
+    clear () {
+      this.$emit('input', '')
     },
 
     /**

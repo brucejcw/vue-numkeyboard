@@ -6,7 +6,7 @@
           <td>7</td>
           <td>8</td>
           <td>9</td>
-          <td data-code='D' rowspan="2"><icon name='del' /></td>
+          <td data-code='D' rowspan="2"><numkeyboard-icon name='del' /></td>
         </tr>
         <tr>
           <td>4</td>
@@ -22,7 +22,7 @@
         <tr>
           <td>{{ point ? '.' : '' }}</td>
           <td>0</td>
-          <td data-code='F'><icon name="keyfold" /></td>
+          <td data-code='F'><numkeyboard-icon name="keyfold" /></td>
         </tr>
       </tbody>
     </table>

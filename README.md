@@ -17,7 +17,7 @@ import 'vue-numkeyboard/style.css';
 
 Vue.use(numkeyboard);
 
-<numkeyboard v-model="num" ok-text="OK"></numkeyboard>
+<numkeyboard v-model="num" ok-text="OK" text-align="left"></numkeyboard>
 ```
 
 ## Props
@@ -26,6 +26,7 @@ Vue.use(numkeyboard);
 |expose-elem|String|current input element|false|raise page height if expose elemenet is covered by keyboard|
 |point|Boolean|true|false|show digital point|
 |ok-text|String|OK|false|ok button text|
+|text-align|String|''|false|start inputing from left or right|
 |placeholder|String|''|false|placeholder|
 
 [![MIT Licence][licence-image]][licence-url]

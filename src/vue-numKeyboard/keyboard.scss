@@ -121,3 +121,48 @@
     color: #ddd;
   }
 }
+
+/**
+ * css for text-left
+ */
+.keyboard-input.left {
+  text-align: left;
+
+  .icon-clear {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: .2rem;
+    display: flex;
+
+    svg {
+      fill: #8E8E93;
+      width: 0.24rem;
+      height: 0.24rem;
+    }
+  }
+
+  &.keyboard-focus::after {
+    display: none;
+  }
+
+  &.keyboard-focus .input-value {
+    position: relative;
+
+    &::before {
+      content: ' ';
+      display: inline-block;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 10%;
+      height: 80%;
+      border-right: 0.02rem solid #108EE9;
+      animation: cursor infinite 1s step-start;
+    }
+  }
+}
