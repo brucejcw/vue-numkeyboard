@@ -1,7 +1,7 @@
 {
   "name": "vue-numkeyboard",
   "description": "vue number keyboard for mobile",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "bruce.jcw@gmail.com",
   "main": "index.js",
   "dependencies": {

@@ -3,9 +3,9 @@
     <table v-touch:tap="typing" v-touch:long="longTab">
       <tbody>
         <tr>
-          <td>7</td>
-          <td>8</td>
-          <td>9</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
           <td data-code='D' rowspan="2"><numkeyboard-icon name='del' /></td>
         </tr>
         <tr>
@@ -14,9 +14,9 @@
           <td>6</td>
         </tr>
         <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
           <td data-code='K' rowspan="2" :class="{active: activeOk}">{{ okText || 'OK' }}</td>
         </tr>
         <tr>
